@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ARK Trust">
+<meta name="theme-color" content="#1F3A5F">
+<meta name="description" content="ARK Trust 致每一位为家族未来而思考的您 ─ 守护您家族的意志，跨越时间与国界">
+<title>ARK Trust ｜ 致客户信</title>
+<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
+<link href="https://fonts.loli.net/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1F3A5F;
+  --navy-deep:#152841;
+  --navy-darker:#0E1D30;
+  --gold:#C9A66B;
+  --gold-light:#E0C593;
+  --gold-deep:#A88748;
+  --cream:#FAF7F1;
+  --cream-deep:#F2EDE2;
+  --ink:#2A2A2A;
+  --ink-soft:#4A4A4A;
+  --ink-light:#6A6A6A;
+  --line:#E5DECF;
+  --line-deep:#C9C0AB;
+  /* System-first font stack — works even if Google Fonts fails on iOS cellular */
+  --serif-en:'Cormorant Garamond','Times New Roman','Georgia',serif;
+  --serif-cn:'Noto Serif SC','Songti SC','SimSun','PingFang SC',serif;
+  --sans-cn:'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+body{
+  font-family:var(--serif-cn);
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.85;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+  word-wrap:break-word;
+  word-break:break-word;
+}
+img,svg{max-width:100%;height:auto;display:block}
+
+/* ============ HERO ============ */
+.hero{
+  min-height:90vh;
+  background:
+    radial-gradient(ellipse at 20% 0%,rgba(201,166,107,0.12) 0%,transparent 50%),
+    radial-gradient(ellipse at 80% 100%,rgba(31,58,95,0.08) 0%,transparent 50%),
+    linear-gradient(180deg,#FBF8F2 0%,#F4EFE2 100%);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;padding:60px 24px 40px;text-align:center;
+}
+.hero-monogram{
+  font-family:var(--serif-en);font-size:11px;letter-spacing:5px;
+  color:var(--gold);font-weight:500;margin-bottom:18px;
+}
+.hero-divider{
+  width:48px;height:1px;background:var(--gold);margin:0 auto 18px;
+}
+.hero-cn-sub{
+  font-family:var(--serif-cn);font-size:13px;color:var(--ink-soft);
+  letter-spacing:2px;margin-bottom:32px;
+}
+.hero-emblem{margin:8px auto 32px}
+.hero-title{
+  font-family:var(--serif-cn);font-weight:600;
+  font-size:30px;line-height:1.4;color:var(--navy);
+  letter-spacing:1.5px;margin:24px 0 16px;
+}
+.hero-title .gold-accent{color:var(--gold);font-style:italic}
+.hero-sub{
+  font-family:var(--serif-cn);font-size:14px;color:var(--ink-soft);
+  font-style:italic;letter-spacing:1px;line-height:1.8;
+  max-width:340px;margin:0 auto;
+}
+.hero-from{
+  margin-top:28px;
+  font-family:var(--serif-en);font-style:italic;color:var(--gold);
+  font-size:13px;letter-spacing:2px;
+}
+.hero-from::before,.hero-from::after{
+  content:'──';margin:0 10px;color:var(--gold-deep);
+}
+
+/* ============ SECTIONS ============ */
+.section{
+  padding:64px 22px;
+  position:relative;
+  max-width:720px;margin:0 auto;
+}
+.section-num{
+  font-family:var(--serif-en);font-size:11px;letter-spacing:4px;
+  color:var(--gold);font-weight:500;margin-bottom:14px;
+}
+.section-title{
+  font-family:var(--serif-cn);font-size:24px;font-weight:600;
+  color:var(--navy);line-height:1.4;letter-spacing:0.5px;margin-bottom:14px;
+}
+.section-title-deck{
+  font-family:var(--serif-en);font-style:italic;font-size:14px;
+  color:var(--ink-light);font-weight:400;margin-bottom:32px;
+  padding-bottom:18px;border-bottom:1px solid var(--line);
+  line-height:1.5;
+}
+.section-content p{
+  margin-bottom:18px;color:var(--ink-soft);font-size:15px;
+}
+.section-content strong{color:var(--navy);font-weight:600}
+
+.intro-quote{
+  font-style:italic;color:var(--ink-light);font-size:14px;
+  border-left:3px solid var(--gold);padding-left:14px;
+  margin-bottom:28px;line-height:1.85;
+}
+
+/* ============ 3 ICON CARDS ============ */
+.icon-row{display:flex;flex-direction:column;gap:14px;margin:32px 0}
+.icon-card{
+  background:#fff;border:1px solid var(--line);border-radius:6px;
+  padding:22px 18px;text-align:center;
+}
+.icon-card svg{margin:0 auto 10px}
+.icon-card h4{
+  font-family:var(--serif-cn);font-size:16px;color:var(--navy);
+  font-weight:600;margin-bottom:6px;letter-spacing:0.5px;
+}
+.icon-card p{
+  font-family:var(--sans-cn);font-size:13px;color:var(--ink-light);
+  margin:0;line-height:1.7;
+}
+
+/* ============ SG 4 CARDS ============ */
+.sg-grid{display:flex;flex-direction:column;gap:14px;margin:28px 0}
+.sg-card{
+  background:#fff;border:1px solid var(--line);
+  border-left:3px solid var(--gold);
+  padding:20px 22px;border-radius:4px;
+}
+.sg-card .num{
+  font-family:var(--serif-en);font-size:32px;color:var(--gold);
+  font-weight:300;line-height:1;margin-bottom:4px;font-style:italic;
+}
+.sg-card h4{
+  font-family:var(--serif-cn);font-size:16px;color:var(--navy);
+  font-weight:600;margin-bottom:8px;letter-spacing:0.5px;
+}
+.sg-card p{
+  font-family:var(--sans-cn);font-size:13px;color:var(--ink-soft);
+  line-height:1.75;margin:0;
+}
+.sg-summary{
+  background:var(--navy);color:#fff;padding:20px 22px;
+  border-radius:6px;text-align:center;font-size:14px;line-height:1.75;
+  letter-spacing:0.5px;margin:24px 0;
+}
+.sg-summary strong{color:var(--gold-light);font-weight:600}
+
+/* ============ HARD TRUTH BOX ============ */
+.hard-truth{
+  background:linear-gradient(135deg,var(--navy-deep),var(--navy));
+  color:#fff;padding:28px 22px;border-radius:6px;margin:32px 0;
+}
+.hard-truth-label{
+  font-family:var(--serif-en);font-size:10px;letter-spacing:4px;
+  color:var(--gold-light);font-weight:500;margin-bottom:12px;text-align:center;
+}
+.hard-truth-text{
+  font-family:var(--serif-cn);font-size:16px;line-height:1.75;
+  color:#fff;font-weight:500;letter-spacing:0.5px;text-align:center;
+}
+.hard-truth-text strong{color:var(--gold-light)}
+
+/* ============ MOBILE-FRIENDLY TABLES (CARD STYLE) ============ */
+.table-caption{
+  font-family:var(--serif-cn);font-size:15px;color:var(--navy);
+  font-weight:600;margin:32px 0 14px;
+  padding-left:10px;border-left:3px solid var(--gold);letter-spacing:0.5px;
+}
+.table-caption strong{color:var(--gold-deep)}
+
+/* Risk cards (replaces table on mobile) */
+.risk-list{display:flex;flex-direction:column;gap:10px;margin-bottom:8px}
+.risk-item{
+  background:#fff;border:1px solid var(--line);border-radius:4px;
+  padding:16px 18px;
+}
+.risk-num{
+  display:inline-block;font-family:var(--serif-en);font-size:18px;
+  color:var(--gold-deep);font-weight:700;margin-right:8px;
+}
+.risk-title{
+  font-family:var(--serif-cn);font-size:15px;color:var(--navy);
+  font-weight:600;display:inline;
+}
+.risk-desc{
+  font-family:var(--sans-cn);font-size:13px;color:var(--ink-soft);
+  margin-top:8px;line-height:1.7;
+}
+.risk-desc strong{color:var(--navy)}
+
+/* Capability comparison (stacked) */
+.cap-list{display:flex;flex-direction:column;gap:14px}
+.cap-item{
+  background:#fff;border:1px solid var(--line);border-radius:4px;
+  padding:16px 18px;
+}
+.cap-dim{
+  font-family:var(--serif-cn);font-size:14px;color:var(--navy);
+  font-weight:600;margin-bottom:10px;letter-spacing:0.5px;
+  padding-bottom:8px;border-bottom:1px solid var(--line);
+}
+.cap-row{
+  display:flex;gap:10px;margin-bottom:6px;font-size:13px;line-height:1.65;
+}
+.cap-row .cap-label{
+  flex-shrink:0;font-family:var(--sans-cn);font-size:11px;
+  color:var(--ink-light);font-weight:500;
+  width:64px;padding-top:1px;
+}
+.cap-row .cap-val{font-family:var(--sans-cn);color:var(--ink-soft)}
+.cap-row.ark .cap-label{color:var(--gold-deep);font-weight:600}
+.cap-row.ark .cap-val{color:var(--navy);font-weight:500}
+
+/* Compare cards (vs low-price) */
+.compare-list{display:flex;flex-direction:column;gap:12px;margin:14px 0}
+.compare-item{
+  background:#fff;border:1px solid var(--line);border-radius:4px;
+  padding:14px 16px;
+}
+.compare-dim{
+  font-family:var(--serif-cn);font-size:14px;color:var(--navy);
+  font-weight:600;margin-bottom:10px;letter-spacing:0.5px;
+}
+.compare-row{
+  display:flex;gap:8px;font-size:12.5px;line-height:1.65;
+  padding:8px 0;border-top:1px dashed var(--line);
+}
+.compare-row:first-of-type{border-top:none}
+.compare-row .compare-side{
+  flex-shrink:0;width:46px;font-family:var(--sans-cn);font-size:10px;
+  font-weight:600;letter-spacing:0.5px;padding-top:1px;
+}
+.compare-row.low .compare-side{color:#B66}
+.compare-row.ark .compare-side{color:var(--gold-deep)}
+.compare-row .compare-text{font-family:var(--sans-cn);color:var(--ink-soft)}
+.compare-row.ark{background:rgba(201,166,107,0.06);margin:0 -10px;padding:8px 10px;border-radius:3px;border-top:none}
+.compare-row.ark .compare-text{color:var(--navy)}
+
+/* ============ PATH PANEL (do/dont) ============ */
+.path-panel{
+  background:linear-gradient(135deg,var(--navy-darker),var(--navy));
+  color:#fff;border-radius:6px;padding:28px 22px;margin:32px 0;
+}
+.path-panel h3{
+  font-family:var(--serif-cn);font-size:17px;font-weight:600;
+  color:#fff;margin-bottom:18px;text-align:center;letter-spacing:1px;
+}
+.path-panel h3::after{
+  content:'';display:block;width:36px;height:1px;background:var(--gold);
+  margin:10px auto 0;
+}
+.path-row{
+  padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);
+  font-family:var(--sans-cn);font-size:13px;line-height:1.65;
+}
+.path-row:last-child{border-bottom:none}
+.path-no{
+  color:rgba(255,200,200,0.75);margin-bottom:6px;
+}
+.path-no::before{content:'✕  ';color:#D88;font-weight:600}
+.path-yes{color:var(--gold-light);font-weight:500}
+.path-yes::before{content:'✓  ';color:var(--gold-light);font-weight:600}
+
+/* ============ ADVANTAGE CARDS ============ */
+.adv-grid{display:flex;flex-direction:column;gap:14px;margin:28px 0}
+.adv-card{
+  background:#fff;border:1px solid var(--line);border-radius:6px;
+  padding:22px 20px;position:relative;
+}
+.adv-card .adv-num{
+  font-family:var(--serif-en);font-size:36px;color:var(--gold);
+  font-weight:300;font-style:italic;line-height:1;
+}
+.adv-card h4{
+  font-family:var(--serif-cn);font-size:17px;color:var(--navy);
+  font-weight:600;margin:6px 0 6px;letter-spacing:0.5px;
+}
+.adv-card .adv-sub{
+  font-family:var(--serif-en);font-style:italic;font-size:11px;
+  color:var(--gold-deep);margin-bottom:14px;letter-spacing:1px;
+}
+.adv-card ul{list-style:none;padding:0;margin:0}
+.adv-card ul li{
+  font-family:var(--sans-cn);font-size:13px;color:var(--ink-soft);
+  line-height:1.75;padding-left:14px;position:relative;margin-bottom:6px;
+}
+.adv-card ul li::before{
+  content:'';position:absolute;left:0;top:9px;
+  width:5px;height:5px;background:var(--gold);transform:rotate(45deg);
+}
+.adv-card .adv-quote{
+  margin-top:14px;padding-top:14px;border-top:1px dashed var(--line-deep);
+  font-family:var(--serif-cn);font-size:13px;color:var(--navy);
+  font-style:italic;font-weight:500;line-height:1.65;
+}
+
+/* ============ TIMELINE ============ */
+.timeline{position:relative;padding:18px 0;margin:32px 0}
+.timeline::before{
+  content:'';position:absolute;left:24px;top:24px;bottom:24px;
+  width:2px;background:linear-gradient(180deg,var(--gold),var(--gold-light));
+}
+.stage{
+  display:flex;gap:18px;margin-bottom:24px;align-items:flex-start;
+  position:relative;
+}
+.stage-marker{
+  flex-shrink:0;width:50px;height:50px;border-radius:50%;
+  background:#fff;border:2px solid var(--gold);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-family:var(--serif-en);position:relative;z-index:2;
+  box-shadow:0 4px 12px rgba(201,166,107,0.2);
+}
+.stage-marker .stage-label{
+  font-size:7px;letter-spacing:1.5px;color:var(--gold-deep);
+  margin-top:1px;font-weight:600;
+}
+.stage-marker .stage-num{font-size:16px;font-weight:600;color:var(--navy)}
+.stage-body{
+  flex:1;background:#fff;border:1px solid var(--line);
+  padding:16px 18px;border-radius:4px;min-width:0;
+}
+.stage-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:6px;flex-wrap:wrap;gap:6px;
+}
+.stage-title{
+  font-family:var(--serif-cn);font-size:15px;font-weight:600;
+  color:var(--navy);letter-spacing:0.5px;
+}
+.stage-time{
+  font-family:var(--sans-cn);font-size:11px;color:var(--gold-deep);
+  font-weight:600;background:var(--cream-deep);
+  padding:3px 10px;border-radius:14px;letter-spacing:0.5px;white-space:nowrap;
+}
+.stage-desc{
+  font-family:var(--sans-cn);font-size:13px;color:var(--ink-soft);
+  line-height:1.75;margin:0;
+}
+.stage-desc strong{color:var(--navy)}
+
+.time-promise{
+  background:linear-gradient(135deg,var(--cream-deep),#fff);
+  border:1px solid var(--gold);border-left:4px solid var(--gold);
+  padding:18px 20px;border-radius:6px;margin:28px 0;
+}
+.time-promise h4{
+  font-family:var(--serif-cn);font-size:14px;color:var(--gold-deep);
+  font-weight:600;margin-bottom:8px;letter-spacing:0.5px;
+}
+.time-promise p{
+  font-family:var(--sans-cn);font-size:13px;color:var(--ink-soft);
+  line-height:1.8;margin:0;
+}
+.time-promise strong{color:var(--navy)}
+
+/* ============ FEE ============ */
+.fee-grid{display:flex;flex-direction:column;gap:14px;margin:28px 0}
+.fee-card{
+  background:#fff;border:1px solid var(--line);
+  padding:24px 20px;border-radius:6px;text-align:center;
+}
+.fee-card svg{margin:0 auto 12px}
+.fee-card h4{
+  font-family:var(--serif-cn);font-size:17px;color:var(--navy);
+  font-weight:600;margin-bottom:4px;
+}
+.fee-card .fee-tag{
+  font-family:var(--serif-en);font-style:italic;font-size:11px;
+  color:var(--gold-deep);margin-bottom:10px;letter-spacing:1px;
+}
+.fee-card p{
+  font-family:var(--sans-cn);font-size:13px;color:var(--ink-soft);
+  line-height:1.75;margin:0;
+}
+.fee-promise{
+  background:linear-gradient(135deg,var(--navy-deep),var(--navy));
+  color:#fff;padding:24px 20px;border-radius:6px;text-align:center;
+  margin:24px 0;
+}
+.fee-promise p{
+  font-family:var(--serif-cn);font-size:14px;line-height:1.85;
+  color:#fff;margin:0;letter-spacing:0.3px;
+}
+.fee-promise strong{color:var(--gold-light)}
+
+/* ============ LEAD QUOTE ============ */
+.lead-quote{
+  font-family:var(--serif-cn);font-size:16px;line-height:1.85;
+  color:var(--navy);text-align:center;
+  padding:24px 16px;margin:32px 0;
+  border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);
+  font-weight:500;letter-spacing:0.5px;
+}
+
+/* ============ CLOSING ============ */
+.closing-section{
+  background:linear-gradient(135deg,var(--navy-darker) 0%,var(--navy) 50%,var(--navy-deep) 100%);
+  color:#fff;padding:64px 22px 56px;margin-top:0;
+}
+.closing-inner{max-width:680px;margin:0 auto}
+.closing-label{
+  font-family:var(--serif-en);font-size:11px;letter-spacing:4px;
+  color:var(--gold);font-weight:500;text-align:center;margin-bottom:14px;
+}
+.closing-label::after{
+  content:'';display:block;width:40px;height:1px;background:var(--gold);
+  margin:10px auto 0;
+}
+.closing-promise-title{
+  font-family:var(--serif-cn);font-size:22px;color:var(--gold-light);
+  text-align:center;font-weight:600;margin-bottom:24px;letter-spacing:1px;
+}
+.closing-promise-text{
+  font-family:var(--serif-cn);font-size:15px;line-height:1.95;
+  color:rgba(255,255,255,0.92);margin-bottom:32px;
+}
+.closing-promise-text strong{color:var(--gold-light)}
+.closing-quote{
+  font-family:var(--serif-cn);font-size:17px;line-height:1.85;
+  color:var(--gold-light);font-style:italic;text-align:center;
+  padding:22px 0;border-top:1px solid rgba(201,166,107,0.4);
+  border-bottom:1px solid rgba(201,166,107,0.4);margin:32px 0;
+  letter-spacing:1px;font-weight:500;
+}
+.closing-cta-block{
+  background:rgba(201,166,107,0.10);
+  border:1.5px solid rgba(201,166,107,0.55);
+  padding:24px 20px;border-radius:6px;margin:28px 0;text-align:center;
+}
+.closing-cta-block p{
+  font-family:var(--sans-cn);font-size:13px;color:rgba(255,255,255,0.88);
+  line-height:1.85;margin:0 0 18px;
+}
+.closing-cta-block strong{color:var(--gold-light);font-weight:500}
+.cta-button{
+  display:inline-block;padding:14px 36px;
+  background:var(--gold);color:var(--navy-darker);
+  font-family:var(--serif-cn);font-size:15px;font-weight:600;
+  letter-spacing:2px;text-decoration:none;border-radius:3px;
+  border:1px solid var(--gold);
+  box-shadow:0 4px 16px rgba(201,166,107,0.35);
+  -webkit-appearance:none;appearance:none;
+}
+.cta-sub{
+  margin-top:14px;font-family:var(--serif-en);font-style:italic;
+  font-size:11px;color:rgba(201,166,107,0.75);letter-spacing:1.5px;
+}
+.cta-followup{
+  margin-top:20px;color:rgba(255,255,255,0.7);font-size:13px;line-height:1.75;
+  font-family:var(--sans-cn);
+}
+.cta-followup strong{color:var(--gold-light)}
+.signature{margin-top:40px;text-align:center}
+.signature .salute{
+  font-family:var(--serif-cn);font-size:14px;color:rgba(255,255,255,0.7);
+  margin-bottom:20px;letter-spacing:3px;
+}
+.signature-name{
+  font-family:var(--serif-en);font-size:24px;color:var(--gold-light);
+  font-weight:600;letter-spacing:5px;margin-bottom:8px;
+}
+.signature-meta{
+  font-family:var(--serif-cn);font-size:12px;color:rgba(255,255,255,0.6);
+  font-style:italic;letter-spacing:1px;line-height:1.7;
+}
+.signature-date{
+  margin-top:14px;font-family:var(--serif-cn);font-size:12px;
+  color:rgba(255,255,255,0.5);letter-spacing:2px;
+}
+
+/* ============ FOOTER ============ */
+.footer{background:var(--navy-darker);padding:24px 20px;text-align:center}
+.footer p{
+  font-family:var(--serif-en);font-size:10px;letter-spacing:2px;
+  color:rgba(255,255,255,0.4);margin:0;line-height:1.6;
+}
+
+/* ============ TABLET / DESKTOP ENHANCEMENTS ============ */
+@media (min-width:640px){
+  body{font-size:16px}
+  .hero{padding:80px 40px 60px}
+  .hero-title{font-size:42px}
+  .hero-sub{font-size:16px;max-width:520px}
+  .section{padding:90px 40px}
+  .section-title{font-size:30px}
+  .section-title-deck{font-size:16px}
+  .section-content p{font-size:16px}
+  .icon-row{flex-direction:row}
+  .sg-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .fee-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .closing-section{padding:90px 40px}
+  .closing-promise-title{font-size:28px}
+  .closing-quote{font-size:22px}
+  .signature-name{font-size:30px;letter-spacing:6px}
+}
+
+/* iOS Safari specific safe-area */
+@supports(padding:max(0px)){
+  .hero{padding-top:max(60px,env(safe-area-inset-top))}
+  .footer{padding-bottom:max(24px,env(safe-area-inset-bottom))}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div>
+    <div class="hero-monogram">EST. ARK TRUST</div>
+    <div class="hero-divider"></div>
+    <div class="hero-cn-sub">致每一位为家族未来而思考的您</div>
+
+    <div class="hero-emblem">
+      <svg width="100" height="100" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="58" fill="none" stroke="#C9A66B" stroke-width="0.6"/>
+        <circle cx="60" cy="60" r="48" fill="none" stroke="#C9A66B" stroke-width="0.6" stroke-dasharray="2 4"/>
+        <g transform="translate(60,72)">
+          <path d="M 0,0 L 0,-30 M 0,-12 L -10,-22 M 0,-12 L 10,-22 M 0,-22 L -7,-30 M 0,-22 L 7,-30" stroke="#1F3A5F" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+          <circle cx="-10" cy="-22" r="4" fill="#C9A66B"/>
+          <circle cx="10" cy="-22" r="4" fill="#C9A66B"/>
+          <circle cx="-7" cy="-30" r="3" fill="#1F3A5F"/>
+          <circle cx="7" cy="-30" r="3" fill="#1F3A5F"/>
+          <circle cx="0" cy="-32" r="3" fill="#C9A66B"/>
+          <line x1="-12" y1="0" x2="12" y2="0" stroke="#1F3A5F" stroke-width="1"/>
+        </g>
+        <text x="60" y="98" text-anchor="middle" font-family="serif" font-size="7" letter-spacing="2" fill="#1F3A5F">HK · SG</text>
+      </svg>
+    </div>
+
+    <h1 class="hero-title">让财富，<br><span class="gold-accent">安全地</span>穿越时间</h1>
+    <p class="hero-sub">财富管理的真正考验，不在创造的那一刻，而在于它能否安全穿越婚姻、代际、税制与地缘的变迁。</p>
+    <div class="hero-from">来自 ARK Trust 的一封信</div>
+  </div>
+</section>
+
+<!-- ============ 1. WHAT IS TRUST ============ -->
+<section class="section" id="sec-1">
+  <div class="section-num">CHAPTER · 01</div>
+  <h2 class="section-title">信托是什么？</h2>
+  <p class="section-title-deck">Not a financial product, but a cross-generational institutional commitment.</p>
+
+  <div class="section-content">
+    <p class="intro-quote">
+      打开这封信，意味着您已经在思考一件比"投资"更重要的事——<strong>如何让自己一生积累的财富、安排与意志，安全地穿越时间，落到您所爱的人手中。</strong>
+    </p>
+
+    <p>信托做的不是"投资"，而是把您的财产从"个人持有"转化为"以家族意志为目的的独立法律实体"。一旦设立，资产将与您的个人债务、婚姻纠纷、潜在的诉讼风险实现法律意义上的隔离；分配的节奏、对象、条件，由您一次性写入信托文件。</p>
+
+    <p style="text-align:center;font-size:15px;color:var(--navy);margin:32px 0 16px;">简单总结，信托做三件事 ──</p>
+
+    <div class="icon-row">
+      <div class="icon-card">
+        <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+          <rect x="8" y="14" width="32" height="26" rx="2" stroke="#1F3A5F" stroke-width="1.5"/>
+          <path d="M 14 14 L 14 8 Q 14 6 16 6 L 32 6 Q 34 6 34 8 L 34 14" stroke="#C9A66B" stroke-width="1.5" fill="none"/>
+          <circle cx="24" cy="26" r="3" fill="#C9A66B"/>
+          <line x1="24" y1="29" x2="24" y2="34" stroke="#C9A66B" stroke-width="1.5"/>
+        </svg>
+        <h4>资产隔离</h4>
+        <p>与个人债务、婚姻、诉讼<br>形成法律屏障</p>
+      </div>
+      <div class="icon-card">
+        <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+          <path d="M 8 38 L 24 8 L 40 38 Z" stroke="#1F3A5F" stroke-width="1.5" fill="none"/>
+          <line x1="14" y1="28" x2="34" y2="28" stroke="#C9A66B" stroke-width="1.2"/>
+          <line x1="18" y1="20" x2="30" y2="20" stroke="#C9A66B" stroke-width="1.2"/>
+          <circle cx="24" cy="14" r="2" fill="#C9A66B"/>
+        </svg>
+        <h4>传承指令</h4>
+        <p>分配节奏、对象、条件<br>由您一次性写入</p>
+      </div>
+      <div class="icon-card">
+        <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="16" stroke="#1F3A5F" stroke-width="1.5" fill="none"/>
+          <path d="M 24 14 L 24 24 L 32 28" stroke="#C9A66B" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <h4>税务效率</h4>
+        <p>合规架构下的<br>跨境与代际优化</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. WHY SINGAPORE ============ -->
+<section class="section" id="sec-2">
+  <div class="section-num">CHAPTER · 02</div>
+  <h2 class="section-title">信托为什么设在新加坡？</h2>
+  <p class="section-title-deck">Why Singapore — The choice of Asian families.</p>
+
+  <div class="section-content">
+    <p>在全球可选的信托司法管辖区中，新加坡近年来成为<strong>亚洲家族的首选</strong>，原因有四：</p>
+
+    <div class="sg-grid">
+      <div class="sg-card">
+        <div class="num">01</div>
+        <h4>制度稳定，法治可预期</h4>
+        <p>普通法系国家，信托制度成熟超过百年，受《受托人法》严格规范，司法独立性高。</p>
+      </div>
+      <div class="sg-card">
+        <div class="num">02</div>
+        <h4>全球认可的金融中心</h4>
+        <p>AAA 主权评级，亚洲最重要的资产管理中心之一，与中国、香港、美国、欧盟均有完善税收协定。</p>
+      </div>
+      <div class="sg-card">
+        <div class="num">03</div>
+        <h4>对家族财富友好的税制</h4>
+        <p>符合条件的信托收入可享受免税待遇，<strong>无遗产税、无资本利得税</strong>。</p>
+      </div>
+      <div class="sg-card">
+        <div class="num">04</div>
+        <h4>华语服务可得性高</h4>
+        <p>少数能够提供"母语级"信托与法律服务的离岸中心，沟通效率与判断准确度远高于泽西、开曼。</p>
+      </div>
+    </div>
+
+    <div class="sg-summary">
+      对全球华人家庭而言，新加坡兼顾了<strong>"法律的严谨"</strong>与<strong>"沟通的便利"</strong>——这是其他选项难以同时满足的。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. WHY ARK ============ -->
+<section class="section" id="sec-3">
+  <div class="section-num">CHAPTER · 03</div>
+  <h2 class="section-title">为什么是 ARK Trust？</h2>
+  <p class="section-title-deck">The conversation we most want to have honestly with you.</p>
+
+  <div class="section-content">
+    <p>"为什么是 ARK Trust"需要我们与您进行一场<strong>更深入、更坦诚的对话</strong>。行业里有一个不常被提起、却极为关键的事实：</p>
+
+    <div class="hard-truth">
+      <div class="hard-truth-label">A HARD TRUTH</div>
+      <p class="hard-truth-text">
+        信托行业真正的风险，不在<strong>收费高低</strong>，而在受托机构能否在<strong>百年的时间维度</strong>上持续存在并履职。
+      </p>
+    </div>
+
+    <p>低价机构看似为客户省下了一笔年费，但它们在客户事先难以察觉的地方，往往隐藏着<strong>结构性的风险</strong>。</p>
+
+    <div class="table-caption">低价信托机构的<strong>六类典型风险</strong></div>
+    <div class="risk-list">
+      <div class="risk-item"><span class="risk-num">①</span><span class="risk-title">人员单点依赖</span><div class="risk-desc">核心人员一旦离港、离业或纠纷，信托档案随即无人管理。</div></div>
+      <div class="risk-item"><span class="risk-num">②</span><span class="risk-title">档案缺失</span><div class="risk-desc">分配、举证、披露的关键时刻，缺档足以让整个信托在法律上失效。</div></div>
+      <div class="risk-item"><span class="risk-num">③</span><span class="risk-title">合规缺口</span><div class="risk-desc">监管升级一旦触发审查，<strong>被冻结的不是这家公司，而是您的信托</strong>。</div></div>
+      <div class="risk-item"><span class="risk-num">④</span><span class="risk-title">机构倒闭</span><div class="risk-desc">信托进入法律真空——更换受托人<strong>耗时超过一年、法律费用逾 60 万港元</strong>。</div></div>
+      <div class="risk-item"><span class="risk-num">⑤</span><span class="risk-title">能力空心</span><div class="risk-desc">家族每一次变化都需要受托能力跟上；运营深度不足，信托终将沦为空壳。</div></div>
+      <div class="risk-item"><span class="risk-num">⑥</span><span class="risk-title">证据链断裂</span><div class="risk-desc">受托人决议与文件链条缺失，您的家人在未来争议中将处于极度不利的地位。</div></div>
+    </div>
+    <p style="text-align:center;font-style:italic;color:var(--gold-deep);font-size:13px;margin:18px 0 28px;">这六类风险，每一类都是<strong style="color:var(--gold-deep)">真实发生过的客户经历</strong>。</p>
+
+    <div class="lead-quote">
+      ARK Trust 选择的，是一条更难、但更长远的路。<br>
+      我们以<span style="color:var(--gold-deep);font-weight:600">机构能力</span>换取客户跨越代际的长期信任。
+    </div>
+
+    <div class="table-caption">ARK Trust 的存续保障 ── <strong>七项可被验证的机构能力</strong></div>
+    <div class="cap-list">
+      <div class="cap-item">
+        <div class="cap-dim">持牌与合规</div>
+        <div class="cap-row"><div class="cap-label">行业标准</div><div class="cap-val">持有有效信托牌照、合规记录清白</div></div>
+        <div class="cap-row ark"><div class="cap-label">ARK</div><div class="cap-val">香港 + 新加坡双牌照，10 年以上运营历史</div></div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-dim">档案管理体系</div>
+        <div class="cap-row"><div class="cap-label">行业标准</div><div class="cap-val">数字化、多地备份、不依赖任何单一员工</div></div>
+        <div class="cap-row ark"><div class="cap-label">ARK</div><div class="cap-val">机构级数字档案 + 全球知名保密档案机构托管</div></div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-dim">专职信托团队</div>
+        <div class="cap-row"><div class="cap-label">行业标准</div><div class="cap-val">专职信托官员，客户比合理可控</div></div>
+        <div class="cap-row ark"><div class="cap-label">ARK</div><div class="cap-val">三类专职 RM + AM 接力，每只信托均有终身责任人</div></div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-dim">业务连续性 BCP</div>
+        <div class="cap-row"><div class="cap-label">行业标准</div><div class="cap-val">受托人转移机制 + 充足专业责任险</div></div>
+        <div class="cap-row ark"><div class="cap-label">ARK</div><div class="cap-val">完善 BCP 安排 + 充足 E&O 保险覆盖</div></div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-dim">多司法管辖能力</div>
+        <div class="cap-row"><div class="cap-label">行业标准</div><div class="cap-val">HK / SG + BVI / 开曼 / 泽西网络</div></div>
+        <div class="cap-row ark"><div class="cap-label">ARK</div><div class="cap-val">HK 与 SG 直接运营 + 全球架构网络</div></div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-dim">存续管理流程</div>
+        <div class="cap-row"><div class="cap-label">行业标准</div><div class="cap-val">至少年度健康审查 + 主动跟进</div></div>
+        <div class="cap-row ark"><div class="cap-label">ARK</div><div class="cap-val">季度更新 + 半年度复盘 + 年度信托健康报告</div></div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-dim">财务稳健性</div>
+        <div class="cap-row"><div class="cap-label">行业标准</div><div class="cap-val">公司财务独立于客户资产、经营现金流稳健</div></div>
+        <div class="cap-row ark"><div class="cap-label">ARK</div><div class="cap-val">完全独立 + 经营现金流稳健</div></div>
+      </div>
+    </div>
+
+    <p style="text-align:center;font-style:italic;color:var(--ink-soft);margin:24px 0;">把这份清单提交给任何其他信托公司——<strong>这不是 ARK 的标准，这是行业的底线</strong>。</p>
+
+    <div class="table-caption">核心差异对比 ｜ <strong>专业 vs 低价</strong></div>
+    <div class="compare-list">
+      <div class="compare-item">
+        <div class="compare-dim">机构稳定性</div>
+        <div class="compare-row low"><div class="compare-side">低价</div><div class="compare-text">依赖 1–2 位创始人个人，人员流失即服务中断</div></div>
+        <div class="compare-row ark"><div class="compare-side">ARK</div><div class="compare-text">机构信用与个人无关，员工更替不影响连续性</div></div>
+      </div>
+      <div class="compare-item">
+        <div class="compare-dim">档案管理</div>
+        <div class="compare-row low"><div class="compare-side">低价</div><div class="compare-text">文件分散或残缺，关键文件可能仅存于个人设备</div></div>
+        <div class="compare-row ark"><div class="compare-side">ARK</div><div class="compare-text">全数字化档案，多地备份，覆盖全生命周期</div></div>
+      </div>
+      <div class="compare-item">
+        <div class="compare-dim">合规能力</div>
+        <div class="compare-row low"><div class="compare-side">低价</div><div class="compare-text">基础合规，难以应对 CRS / FATCA / AML 升级</div></div>
+        <div class="compare-row ark"><div class="compare-side">ARK</div><div class="compare-text">专职合规团队，主动追踪监管变化</div></div>
+      </div>
+      <div class="compare-item">
+        <div class="compare-dim">存续风险</div>
+        <div class="compare-row low"><div class="compare-side">低价</div><div class="compare-text">极高：公司关闭信托即进入法律真空，更换成本全由客户承担</div></div>
+        <div class="compare-row ark"><div class="compare-side">ARK</div><div class="compare-text">可控：完善 BCP，合作机构保障极端情况下服务延续</div></div>
+      </div>
+      <div class="compare-item">
+        <div class="compare-dim">服务深度</div>
+        <div class="compare-row low"><div class="compare-side">低价</div><div class="compare-text">仅基本设立和简单续期，复杂需求外包或拒绝</div></div>
+        <div class="compare-row ark"><div class="compare-side">ARK</div><div class="compare-text">全生命周期管理：税务、家族治理、受益人教育、跨代规划</div></div>
+      </div>
+      <div class="compare-item">
+        <div class="compare-dim">收费透明度</div>
+        <div class="compare-row low"><div class="compare-side">低价</div><div class="compare-text">低年费吸引，复杂事项收高额附加费，信息不对称</div></div>
+        <div class="compare-row ark"><div class="compare-side">ARK</div><div class="compare-text">合理且透明的收费结构，服务范围与费用一目了然</div></div>
+      </div>
+      <div class="compare-item">
+        <div class="compare-dim">长期总成本</div>
+        <div class="compare-row low"><div class="compare-side">低价</div><div class="compare-text">表面低价，隐性补救成本可达数十至数百万港元</div></div>
+        <div class="compare-row ark"><div class="compare-side">ARK</div><div class="compare-text">合理定价，10 年维度总成本远低于低价公司的隐性累积</div></div>
+      </div>
+    </div>
+
+    <div class="path-panel">
+      <h3>ARK Trust 的不做与坚持</h3>
+      <div class="path-row">
+        <div class="path-no">以低价竞争换取市场份额</div>
+        <div class="path-yes">以运营质量换取客户的长期信任</div>
+      </div>
+      <div class="path-row">
+        <div class="path-no">将信托视为签约即完成的产品</div>
+        <div class="path-yes">视信托为需要持续管理的长期关系</div>
+      </div>
+      <div class="path-row">
+        <div class="path-no">依赖明星销售人员的个人关系</div>
+        <div class="path-yes">建立不依赖任何个人的机构化能力</div>
+      </div>
+      <div class="path-row">
+        <div class="path-no">忽视后台运营以节省成本</div>
+        <div class="path-yes">在后台系统和合规体系上持续投入</div>
+      </div>
+      <div class="path-row">
+        <div class="path-no">对客户未来的需求被动应对</div>
+        <div class="path-yes">主动定期审查，提前识别并解决潜在问题</div>
+      </div>
+    </div>
+
+    <p style="text-align:center;font-size:16px;color:var(--navy);margin:32px 0 18px;font-weight:600;letter-spacing:1px;">ARK Trust 的四项核心优势</p>
+
+    <div class="adv-grid">
+      <div class="adv-card">
+        <div class="adv-num">01</div>
+        <h4>运营体系全链路</h4>
+        <div class="adv-sub">SUSTAINABLE OPERATION</div>
+        <ul>
+          <li>前台、中台、后台完整团队</li>
+          <li>每一单信托均有责任人与标准流程</li>
+          <li>设立到存续的长期运营机制</li>
+        </ul>
+        <div class="adv-quote">让信托从"一次性交付"，变成"持续经营的资产系统"。</div>
+      </div>
+
+      <div class="adv-card">
+        <div class="adv-num">02</div>
+        <h4>律所白名单机制</h4>
+        <div class="adv-sub">PROFESSIONAL INDEPENDENCE</div>
+        <ul>
+          <li>全球头部律所白名单（含华语泽西法律师）</li>
+          <li>客户可自主选择合作律所</li>
+          <li>确保法律结构的专业、独立、客观</li>
+        </ul>
+        <div class="adv-quote">让信托从"单一判断"，升级为"多元独立的专业决策"。</div>
+      </div>
+
+      <div class="adv-card">
+        <div class="adv-num">03</div>
+        <h4>AI 驱动存续服务</h4>
+        <div class="adv-sub">CONTINUOUS VISIBILITY</div>
+        <ul>
+          <li>客户资产全景图，一目了然</li>
+          <li>关键动态实时更新，信息不滞后</li>
+          <li>自动化生成存续报告</li>
+        </ul>
+        <div class="adv-quote">将信托从"黑箱结构"，转变为"透明系统"。</div>
+      </div>
+
+      <div class="adv-card">
+        <div class="adv-num">04</div>
+        <h4>信托档案安全管理</h4>
+        <div class="adv-sub">LONG-TERM CUSTODY</div>
+        <ul>
+          <li>由全球知名保密档案机构存储</li>
+          <li>长期安全、隐私保护、可追溯性</li>
+          <li>不依赖个人的机构级档案体系</li>
+        </ul>
+        <div class="adv-quote">让信托从"个人保管"，升级为"机构级长期守护"。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. PROCESS ============ -->
+<section class="section" id="sec-4">
+  <div class="section-num">CHAPTER · 04</div>
+  <h2 class="section-title">在 ARK Trust 设立信托的流程</h2>
+  <p class="section-title-deck">Six stages we walk through together — with you, every step.</p>
+
+  <div class="section-content">
+    <p>我们把信托设立拆解为<strong>六个标准阶段</strong>，每一阶段都有明确的输出物与责任人：</p>
+
+    <div class="timeline">
+      <div class="stage">
+        <div class="stage-marker"><div class="stage-num">01</div><div class="stage-label">STAGE</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><div class="stage-title">需求识别</div><div class="stage-time">约 1 周</div></div>
+          <p class="stage-desc">通过结构化的深度对话，帮助您梳理财富目标、家族结构、资产分布与税务身份。</p>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-marker"><div class="stage-num">02</div><div class="stage-label">STAGE</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><div class="stage-title">架构设计</div><div class="stage-time">约 1–2 周</div></div>
+          <p class="stage-desc">基于您的具体情况，匹配最合适的信托类型、司法管辖区，以及单层或双层架构。</p>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-marker"><div class="stage-num">03</div><div class="stage-label">STAGE</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><div class="stage-title">设立执行</div><div class="stage-time">约 2–3 周</div></div>
+          <p class="stage-desc">启动信托设立，同步完成 BVI 或其他持有公司设立。文件由 ARK 团队携手白名单律师推进。</p>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-marker"><div class="stage-num">04</div><div class="stage-label">STAGE</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><div class="stage-title">信托开户</div><div class="stage-time">与阶段三并行</div></div>
+          <p class="stage-desc">ARK 投资账户与信托设立<strong>同步推进</strong>——这是 ARK Trust 在流程上的关键创新。</p>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-marker"><div class="stage-num">05</div><div class="stage-label">STAGE</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><div class="stage-title">资产注入</div><div class="stage-time">设立后 60 天内</div></div>
+          <p class="stage-desc">首笔资产注入是信托真正"活起来"的标志。我们陪同您完成跨境转账、资产过户、产品配置等环节。</p>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-marker"><div class="stage-num">06</div><div class="stage-label">STAGE</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><div class="stage-title">持续服务</div><div class="stage-time">终身陪伴</div></div>
+          <p class="stage-desc">季度状态更新、半年度家族财富复盘、年度信托健康报告。<strong>信托设立完成不是终点，而是起点。</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="time-promise">
+      <h4>关于时效 ｜ TURNAROUND COMMITMENT</h4>
+      <p><strong>标准版：</strong>4–6 周完成设立、6–8 周完成首笔资产注入；<strong>定制版：</strong>8–12 周。我们会在阶段一结束时给您一份明确的时间表——<strong>既有质量，又要效率</strong>。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. FEES ============ -->
+<section class="section" id="sec-5">
+  <div class="section-num">CHAPTER · 05</div>
+  <h2 class="section-title">费用如何？</h2>
+  <p class="section-title-deck">Transparent and accountable.</p>
+
+  <div class="section-content">
+    <p>ARK Trust 的费用结构透明、可预期，主要分为两部分：</p>
+
+    <div class="fee-grid">
+      <div class="fee-card">
+        <svg width="44" height="44" viewBox="0 0 56 56" fill="none">
+          <rect x="10" y="14" width="36" height="32" rx="2" stroke="#1F3A5F" stroke-width="1.5"/>
+          <line x1="10" y1="22" x2="46" y2="22" stroke="#1F3A5F" stroke-width="1.5"/>
+          <circle cx="28" cy="34" r="6" stroke="#C9A66B" stroke-width="1.6" fill="none"/>
+          <text x="28" y="38" text-anchor="middle" font-family="serif" font-size="9" font-weight="600" fill="#C9A66B">$</text>
+        </svg>
+        <h4>设立费</h4>
+        <div class="fee-tag">ONE-TIME</div>
+        <p>覆盖法律结构搭建、文件起草、公司设立、首次尽调。<strong style="color:var(--navy)">一次性收取</strong>。</p>
+      </div>
+      <div class="fee-card">
+        <svg width="44" height="44" viewBox="0 0 56 56" fill="none">
+          <circle cx="28" cy="28" r="18" stroke="#1F3A5F" stroke-width="1.5" fill="none"/>
+          <path d="M 28 14 A 14 14 0 0 1 42 28" stroke="#C9A66B" stroke-width="2.5" fill="none"/>
+          <circle cx="28" cy="28" r="3" fill="#1F3A5F"/>
+        </svg>
+        <h4>年度管理费</h4>
+        <div class="fee-tag">ANNUAL</div>
+        <p>覆盖架构维护、存续期客户服务与档案管理。<strong style="color:var(--navy)">按年支付</strong>。</p>
+      </div>
+    </div>
+
+    <p>具体金额取决于信托类型、司法管辖区、是否多层架构、受益人数量等。我们会在阶段二的方案书中给您一份<strong>全包式费用清单，不收取任何隐藏费用</strong>。如涉及外部律师，律师费由您与所选律所直接结算，<strong>ARK Trust 不抽取任何返佣</strong>。</p>
+
+    <div class="fee-promise">
+      <p>ARK Trust 的定价，反映的是<strong>10 年、20 年的承诺成本</strong>——这是我们能与您一起走过 10 年、20 年甚至更久的根本前提。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="closing-section" id="sec-6">
+  <div class="closing-inner">
+    <div class="closing-label">EPILOGUE · ARK TRUST 核心承诺</div>
+    <h2 class="closing-promise-title">来自 ARK Trust 的承诺</h2>
+    <p class="closing-promise-text">
+      您交托给 ARK 的，不只是资产的法律所有权。您交托的，是您希望在未来某一天，您的孩子和孙辈能够感受到您对他们的爱与安排。我们理解这一份托付的重量——这正是我们选择将<strong>运营质量置于商业便利之上</strong>的根本原因。
+    </p>
+
+    <div class="closing-quote">
+      "我们不只管理您的资产——<br>我们守护您家族的<span style="font-weight:700">意志</span>，跨越<span style="font-weight:700">时间与国界</span>。"
+    </div>
+
+    <div class="closing-cta-block">
+      <p>如果您愿意展开第一次对话，我们以一份<strong>《信托适配性评估》</strong>开始这段旅程——<strong>免费、无承诺、无压力</strong>。</p>
+      <a href="mailto:trust@arkwealth.sg?subject=信托适配性评估申请" class="cta-button">开始第一次对话</a>
+      <div class="cta-sub">trust@arkwealth.sg ｜ HK · SG</div>
+      <div class="cta-followup">回复本邮件，或致电香港、新加坡两地办公室——<strong>24 小时内，您将收到 ARK Trust 一位资深合伙人的亲自回复</strong>。</div>
+    </div>
+
+    <div class="signature">
+      <div class="salute">此致<br>敬礼</div>
+      <div class="signature-name">ARK · TRUST</div>
+      <div class="signature-meta">香港 · 新加坡 ｜ 双司法管辖运营<br>全球华人家族信托的守护者</div>
+      <div class="signature-date">二〇二六年四月</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>ARK TRUST · 守护您家族的意志，跨越时间与国界<br>HK · SG · 2026</p>
+</footer>
+
+</body>
+</html>
