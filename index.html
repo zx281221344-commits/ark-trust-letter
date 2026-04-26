@@ -881,6 +881,25 @@ table.t .cell-sub{
 @media print{
   .trust-form,.thanks-msg,.thanks-msg-none,.choice-btn{display:none!important}
 }
+
+/* 5th advantage spans full grid width */
+.adv-card-wide{
+  grid-column:1 / -1;
+  background:linear-gradient(135deg,#ffffff 0%,#FBF6EA 100%);
+  border-color:rgba(201,166,107,0.5);
+}
+.adv-card-wide::after{
+  content:'INTEGRATED CAPABILITY';
+  position:absolute;
+  top:14px;right:18px;
+  font-family:var(--serif-en);font-size:10px;
+  letter-spacing:3.5px;color:var(--gold-deep);
+  font-weight:600;opacity:0.85;
+}
+@media (max-width:640px){
+  .adv-card-wide::after{display:none}
+}
+
 </style>
 </head>
 <body>
@@ -1099,7 +1118,7 @@ table.t .cell-sub{
       </p>
     </div>
 
-    <p>低价机构看似为客户省下了一笔年费，但它们在客户事先难以察觉的地方，往往隐藏着<strong>结构性的风险</strong>。</p>
+    <p>这里我们会用到"低价信托机构"这个词，是指一些<strong>创立时间较短、只有数人小团队、靠压缩信托运营基础设施换取低费率优势</strong>的小型信托机构——它们看似便宜的原因，<strong>不是更高效率，而是省略了客户看不见的机构投入</strong>：档案系统、合规团队、税务筹划、业务连续性安排、跨代际服务能力等；因此往往隐藏着<strong>巨大的结构性风险</strong>。</p>
 
     <!-- 6 RISKS TABLE -->
     <div class="risk-table-wrap">
@@ -1109,7 +1128,7 @@ table.t .cell-sub{
           <tr><th style="width:30%">风险类型</th><th>对您的直接后果</th></tr>
         </thead>
         <tbody>
-          <tr><td><span class="risk-num">①</span> <strong>人员单点依赖</strong></td><td>核心人员一旦离港、离业或纠纷，信托档案随即无人管理。</td></tr>
+          <tr><td><span class="risk-num">①</span> <strong>人员单点依赖</strong></td><td>核心人员一旦离岗、离业或纠纷，信托档案随即无人管理。</td></tr>
           <tr><td><span class="risk-num">②</span> <strong>档案缺失</strong></td><td>分配、举证、披露的关键时刻，缺档足以让整个信托在法律上失效。</td></tr>
           <tr><td><span class="risk-num">③</span> <strong>合规缺口</strong></td><td>监管升级一旦触发审查，<strong>被冻结的不是这家公司，而是您的信托</strong>。</td></tr>
           <tr><td><span class="risk-num">④</span> <strong>机构倒闭</strong></td><td>信托进入法律真空——更换受托人<strong>耗时超过一年、法律费用逾 60 万港元</strong>。</td></tr>
@@ -1188,7 +1207,7 @@ table.t .cell-sub{
     </div>
 
     <!-- 4 ADVANTAGES -->
-    <p class="no-indent" style="text-align:center;font-size:18px;color:var(--navy);margin:48px 0 24px;font-weight:600;letter-spacing:2px;">ARK Trust 的四项核心优势</p>
+    <p class="no-indent" style="text-align:center;font-size:18px;color:var(--navy);margin:48px 0 24px;font-weight:600;letter-spacing:2px;">ARK Trust 的五项核心优势</p>
 
     <div class="adv-grid">
       <div class="adv-card">
@@ -1237,6 +1256,18 @@ table.t .cell-sub{
           <li>构建不依赖个人的机构级档案体系</li>
         </ul>
         <div class="adv-quote">让信托从"依赖个人保管"，升级为"机构级长期守护"。</div>
+      </div>
+
+      <div class="adv-card adv-card-wide">
+        <div class="adv-num">05</div>
+        <h4>三地一体化税务统筹</h4>
+        <div class="adv-sub">INTEGRATED TAX EXPERTISE</div>
+        <ul>
+          <li><strong>新加坡 · 香港 · 中国大陆</strong>三地配备专业税务团队，覆盖设立人身份、结构税务中性、受益人受领的全场景</li>
+          <li>从设立、注入到分配、传承全周期，<strong>前置税务筹划而非事后补救</strong></li>
+          <li>主动追踪 <strong>CRS / FATCA / 中国 CFC</strong> 等监管动向，确保跨境合规</li>
+        </ul>
+        <div class="adv-quote">让信托从"单维度法律隔离"，升级为"<strong>法律隔离 + 税务护航的双轮驱动</strong>"。</div>
       </div>
     </div>
   </div>
