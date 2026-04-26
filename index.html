@@ -271,27 +271,29 @@ body{
 
 /* ============ HARD TRUTH BOX ============ */
 .hard-truth{
-  background:linear-gradient(135deg,var(--navy-deep),var(--navy));
+  background-color:var(--navy-deep);
+  background-image:linear-gradient(135deg,var(--navy-deep),var(--navy));
   color:#fff;padding:48px 56px;border-radius:4px;
   margin:48px 0;position:relative;overflow:hidden;
+  box-shadow:0 4px 20px rgba(15,29,48,0.15);
 }
 .hard-truth::before{
   content:'';position:absolute;top:24px;right:32px;
-  font-family:var(--serif-en);font-size:120px;color:rgba(201,166,107,0.15);
-  font-weight:700;line-height:1;
+  font-family:var(--serif-en);font-size:120px;color:rgba(201,166,107,0.12);
+  font-weight:700;line-height:1;z-index:0;pointer-events:none;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C9A66B' opacity='0.15'%3E%3Cpath d='M12 2L2 7v10c0 5.5 3.8 10.7 10 12 6.2-1.3 10-6.5 10-12V7l-10-5z'/%3E%3C/svg%3E");
   width:120px;height:120px;
 }
 .hard-truth-label{
   font-family:var(--serif-en);font-size:12px;letter-spacing:5px;
-  color:var(--gold-light);font-weight:500;margin-bottom:16px;
+  color:var(--gold-light);font-weight:600;margin-bottom:16px;
 }
 .hard-truth-text{
-  font-family:var(--serif-cn);font-size:22px;line-height:1.7;
-  color:#fff;font-weight:500;letter-spacing:1px;
-  text-indent:0;
+  font-family:var(--serif-cn);font-size:22px;line-height:1.75;
+  color:#fff;font-weight:600;letter-spacing:1.5px;
+  text-indent:0;position:relative;z-index:1;
 }
-.hard-truth-text strong{color:var(--gold-light)}
+.hard-truth-text strong{color:var(--gold-light);font-weight:700}
 
 /* ============ RISK TABLE ============ */
 .risk-table-wrap{margin:48px 0}
@@ -739,6 +741,146 @@ table.t.highlight-3rd tbody tr:hover td:last-child{background:rgba(201,166,107,0
   .closing-section{background:#fff;color:var(--ink)}
   .closing-promise-title,.closing-quote,.signature-name,.closing-cta-block strong{color:var(--navy)!important}
 }
+
+/* ============ V2 ADDITIONS ============ */
+/* Section 2 sub-headings */
+.sub-h{
+  font-family:var(--serif-cn);font-size:22px;font-weight:600;
+  color:var(--navy);margin:48px 0 18px;
+  letter-spacing:1.5px;display:flex;align-items:center;
+}
+.sub-h-num{
+  display:inline-block;font-family:var(--serif-en);font-size:14px;
+  width:28px;height:28px;line-height:28px;text-align:center;
+  border:1px solid var(--gold-deep);color:var(--gold-deep);
+  margin-right:14px;border-radius:50%;font-weight:500;
+}
+
+/* 2-column compare table emphasis */
+table.t.compare-2col tbody td.row-num{
+  text-align:center;color:var(--gold-deep);font-family:var(--serif-en);
+  font-size:20px;font-weight:600;background:#FBF6EA;
+}
+table.t .cell-sub{
+  display:inline-block;margin-top:6px;color:var(--ink-soft);
+  font-size:14px;line-height:1.7;
+}
+
+/* How-choose comparison cards */
+.hc-lead{
+  text-align:center;font-size:17px;color:var(--gold-deep);
+  margin:28px 0 8px;font-style:italic;font-weight:500;
+}
+.hc-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:8px 0 32px;
+}
+.hc-card{
+  padding:36px 24px;border:1px solid var(--line-deep);
+  background:#fff;text-align:center;
+  transition:all 0.3s;
+  box-shadow:0 1px 3px rgba(31,58,95,0.04);
+}
+.hc-card:hover{border-color:var(--gold);background:#FBF6EA;box-shadow:0 4px 16px rgba(201,166,107,0.15)}
+.hc-flag{font-size:36px;margin-bottom:14px;line-height:1}
+.hc-place{
+  font-family:var(--serif-cn);font-size:24px;font-weight:600;
+  color:var(--navy);margin-bottom:14px;letter-spacing:3px;
+}
+.hc-desc{color:var(--ink-soft);font-size:15px;line-height:1.8}
+.hc-desc strong{color:var(--gold-deep);font-weight:600}
+
+/* Trust choice CTA */
+.cta-question{
+  margin:40px 0 24px;text-align:center;font-size:18px;
+  color:var(--gold-light);letter-spacing:1.5px;
+}
+.trust-choice{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;
+  margin:0 auto 32px;max-width:560px;
+}
+.choice-btn{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(201,166,107,0.3);
+  padding:24px 14px;cursor:pointer;color:#fff;
+  font-family:inherit;transition:all 0.3s;text-align:center;
+}
+.choice-btn:hover{
+  border-color:var(--gold);background:rgba(201,166,107,0.08);
+  transform:translateY(-2px);
+}
+.choice-btn.active{
+  border-color:var(--gold-light);background:rgba(201,166,107,0.18);
+  box-shadow:0 4px 24px rgba(201,166,107,0.25);
+}
+.choice-flag{font-size:30px;margin-bottom:8px;line-height:1}
+.choice-label{
+  font-family:var(--serif);font-size:17px;font-weight:600;
+  color:var(--gold-light);margin-bottom:4px;letter-spacing:1px;
+}
+.choice-sub{
+  font-family:var(--serif-en);font-size:11px;letter-spacing:2px;
+  color:rgba(255,255,255,0.5);
+}
+.choice-btn-tertiary .choice-flag{
+  color:rgba(255,255,255,0.4);font-size:24px;line-height:30px;
+}
+.choice-btn-tertiary .choice-label{color:rgba(255,255,255,0.7)}
+
+/* Form */
+.trust-form{
+  max-width:480px;margin:0 auto 16px;padding:32px 28px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(201,166,107,0.25);text-align:left;
+}
+.trust-form .form-row{margin-bottom:18px}
+.trust-form label{
+  display:block;color:var(--gold-light);font-size:14px;
+  letter-spacing:1px;font-weight:500;
+}
+.trust-form .req{color:#E0C593;margin-left:2px}
+.trust-form input{
+  width:100%;margin-top:8px;padding:12px 14px;
+  background:rgba(0,0,0,0.3);border:1px solid rgba(201,166,107,0.3);
+  color:#fff;font-size:15px;font-family:inherit;outline:none;
+  transition:border-color 0.3s;box-sizing:border-box;
+}
+.trust-form input:focus{border-color:var(--gold-light)}
+.trust-form input::placeholder{color:rgba(255,255,255,0.3)}
+.trust-form .form-submit{margin:8px 0 16px;width:100%;border:none}
+.trust-form .form-note{
+  font-size:12px;color:rgba(255,255,255,0.55);
+  line-height:1.7;text-align:center;
+}
+.trust-form .form-note strong{color:var(--gold-light)}
+
+/* Thanks message */
+.thanks-msg,.thanks-msg-none{
+  max-width:480px;margin:8px auto;padding:48px 32px;text-align:center;
+  background:rgba(201,166,107,0.05);border:1px solid var(--gold);
+}
+.thanks-mark{
+  width:64px;height:64px;border-radius:50%;
+  border:2px solid var(--gold-light);margin:0 auto 22px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:32px;color:var(--gold-light);font-family:var(--serif-en);
+}
+.thanks-title{
+  font-family:var(--serif);font-size:24px;color:var(--gold-light);
+  margin-bottom:16px;letter-spacing:2px;
+}
+.thanks-text{color:rgba(255,255,255,0.85);font-size:15px;line-height:1.9}
+.thanks-text strong{color:var(--gold-light)}
+
+@media (max-width:640px){
+  .trust-choice{grid-template-columns:1fr;gap:10px}
+  .hc-grid{grid-template-columns:1fr}
+  .sub-h{font-size:18px}
+  .trust-form{padding:24px 20px}
+  table.t .cell-sub{font-size:13px}
+}
+@media print{
+  .trust-form,.thanks-msg,.thanks-msg-none,.choice-btn{display:none!important}
+}
 </style>
 </head>
 <body>
@@ -749,7 +891,7 @@ table.t.highlight-3rd tbody tr:hover td:last-child{background:rgba(201,166,107,0
   <div class="nav-brand">ARK <span class="gold">·</span> TRUST</div>
   <div class="nav-links">
     <a href="#sec-1">信托是什么</a>
-    <a href="#sec-2">为何新加坡</a>
+    <a href="#sec-2">新加坡 · 香港</a>
     <a href="#sec-3">为何ARK</a>
     <a href="#sec-4">流程</a>
     <a href="#sec-5">费用</a>
@@ -769,7 +911,7 @@ table.t.highlight-3rd tbody tr:hover td:last-child{background:rgba(201,166,107,0
   </svg>
   <div class="hero-content">
     <div class="hero-text">
-      <div class="hero-monogram">EST. ARK TRUST</div>
+      <div class="hero-monogram">NOAH · ARK TRUST</div>
       <div class="hero-divider"></div>
       <div class="hero-tagline-en">A LETTER TO YOU</div>
       <div class="hero-cn">致每一位为家族未来而思考的您</div>
@@ -858,40 +1000,83 @@ table.t.highlight-3rd tbody tr:hover td:last-child{background:rgba(201,166,107,0
   </div>
 </section>
 
-<!-- ============ SECTION 2 - WHY SINGAPORE ============ -->
+<!-- ============ SECTION 2 - WHY SG & HK ============ -->
 <section class="section reveal" id="sec-2">
   <div class="section-num">CHAPTER · 02</div>
-  <h2 class="section-title">信托为什么设在新加坡？</h2>
-  <p class="section-title-deck">Why Singapore — The choice of Asian families, for four reasons.</p>
+  <h2 class="section-title">信托为什么设在新加坡和香港？</h2>
+  <p class="section-title-deck">Why Singapore &amp; Hong Kong — The two strongest choices for Chinese families.</p>
 
   <div class="section-content">
-    <p>在全球可选的信托司法管辖区中（新加坡、香港、泽西、开曼、BVI、库克群岛等），新加坡近年来成为<strong>亚洲家族的首选</strong>，原因有四：</p>
+    <p>在全球可选的信托司法管辖区中（新加坡、香港、泽西、开曼、BVI、库克群岛等），<strong>新加坡与香港，是当下最适合华人家族进行长期财富安排的两大核心选择</strong>。</p>
 
-    <div class="sg-grid">
-      <div class="sg-card">
-        <div class="num">01</div>
-        <h4>制度稳定，法治可预期</h4>
-        <p>新加坡是普通法系国家，信托制度成熟超过百年，受《受托人法》（Trustees Act）严格规范，司法独立性高，法律风险可量化。</p>
+    <h3 class="sub-h"><span class="sub-h-num">1</span>共同点 · 两地都是世界级信托司法管辖区</h3>
+    <div class="risk-table-wrap">
+      <table class="t">
+        <thead>
+          <tr><th style="width:28%">维度</th><th>共同标准</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>法律根基</strong></td><td>英国普通法系 + 衡平法（信托发源体系），司法独立排名亚洲前列</td></tr>
+          <tr><td><strong>隐私保护</strong></td><td>信托登记册不公开，受托人受严格保密义务约束</td></tr>
+          <tr><td><strong>税收中性</strong></td><td>无遗产税、无赠与税、无资本利得税、无信托层面预扣税</td></tr>
+          <tr><td><strong>资金自由</strong></td><td>无外汇管制，资金跨境进出自由</td></tr>
+          <tr><td><strong>国际合规</strong></td><td>CRS / AEOI 合规辖区，符合 OECD 标准</td></tr>
+          <tr><td><strong>金融生态</strong></td><td>亚洲最深厚的私人银行 + 家族办公室生态</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-h"><span class="sub-h-num">2</span>两地各自的四大优势</h3>
+    <div class="risk-table-wrap">
+      <table class="t compare-2col">
+        <thead>
+          <tr><th style="width:6%">#</th><th style="width:47%">🇸🇬 新加坡 · 四大优势</th><th style="width:47%">🇭🇰 香港 · 四大优势</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-num">1</td>
+            <td><strong>全球资产配置中枢</strong><br><span class="cell-sub">东南亚 + 全球资产枢纽，与欧美机构对接最顺畅。</span></td>
+            <td><strong>大中华独家通道</strong><br><span class="cell-sub">唯一通过沪港通 / 深港通 / 债券通 / 跨境理财通直接配置 A 股、中债、人民币资产的辖区。</span></td>
+          </tr>
+          <tr>
+            <td class="row-num">2</td>
+            <td><strong>政治超稳定</strong><br><span class="cell-sub">主权 AAA 评级，全球政治风险评级亚洲最低。</span></td>
+            <td><strong>永续传承无期限</strong><br><span class="cell-sub">2013 年立法废除"反永续规则"，信托可无限期存续。</span></td>
+          </tr>
+          <tr>
+            <td class="row-num">3</td>
+            <td><strong>家办税收激励最成熟</strong><br><span class="cell-sub">13O / 13U / 13D 三档家族办公室税收优惠，亚洲最完整。</span></td>
+            <td><strong>百年判例底蕴</strong><br><span class="cell-sub">信托制度自 1934 年起步，亚洲最早、判例最丰富，法律确定性最高。</span></td>
+          </tr>
+          <tr>
+            <td class="row-num">4</td>
+            <td><strong>跨代规划架构灵活</strong><br><span class="cell-sub">VCC + 信托可叠加，多代际持有结构最优。</span></td>
+            <td><strong>离岸人民币枢纽</strong><br><span class="cell-sub">全球最大离岸 RMB 资金池，人民币计价资产一站式配置。</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-h"><span class="sub-h-num">3</span>如何选择？</h3>
+    <p class="hc-lead"><em>首先，无论选哪边，您家族享受的法律保护与税务待遇是同一档次。</em></p>
+    <p style="text-align:center;color:var(--ink-soft);margin-bottom:24px;font-size:16px;">其次，我们更倾向于这样理解两者的差异：</p>
+    <div class="hc-grid">
+      <div class="hc-card hc-sg">
+        <div class="hc-flag">🇸🇬</div>
+        <div class="hc-place">新加坡</div>
+        <div class="hc-desc">更偏 <strong>长期、稳健、全球化</strong><br>的财富承载地</div>
       </div>
-      <div class="sg-card">
-        <div class="num">02</div>
-        <h4>全球认可的金融中心</h4>
-        <p>AAA 主权评级、亚洲最重要的资产管理中心之一，与中国、香港、美国、欧盟等主要经济体均有完善的税收协定网络。</p>
-      </div>
-      <div class="sg-card">
-        <div class="num">03</div>
-        <h4>对家族财富友好的税制</h4>
-        <p>符合条件的信托收入可享受免税待遇，<strong>无遗产税、无资本利得税</strong>。</p>
-      </div>
-      <div class="sg-card">
-        <div class="num">04</div>
-        <h4>华语服务可得性高</h4>
-        <p>少数能够提供"母语级"信托与法律服务的离岸中心，沟通效率与判断准确度远高于泽西、开曼等传统选项。</p>
+      <div class="hc-card hc-hk">
+        <div class="hc-flag">🇭🇰</div>
+        <div class="hc-place">香港</div>
+        <div class="hc-desc">更偏 <strong>灵活、高效、连接中国</strong><br>的资金与执行中心</div>
       </div>
     </div>
 
     <div class="sg-summary">
-      对全球华人家庭而言，新加坡兼顾了<strong>"法律的严谨"</strong>与<strong>"沟通的便利"</strong>——这是其他选项难以同时满足的。
+      <strong>ARK Trust 同时在新加坡与香港两地持有信托业务牌照、双司法管辖区运营</strong>——无论您最终选择哪一种结构，我们都能在当地直接落地、为您全程护航。<br><br>
+      信托的关键，从来不是 <em>「设在哪里」</em>，<br>
+      而是是否匹配 <strong>您的家庭与资产逻辑</strong>。
     </div>
   </div>
 </section>
@@ -1191,9 +1376,57 @@ table.t.highlight-3rd tbody tr:hover td:last-child{background:rgba(201,166,107,0
 
     <div class="closing-cta-block">
       <p>如果您愿意展开第一次对话，我们会以一份<strong>《信托适配性评估》</strong>开始这段旅程——这份评估<strong>免费、无承诺、无压力</strong>，目的只有一个：帮助您判断信托是否真的适合您的家庭，以及（如果适合）如何走出第一步。</p>
-      <a href="mailto:trust@arkwealth.sg?subject=信托适配性评估申请" class="cta-button">开始第一次对话</a>
-      <div class="cta-sub">trust@arkwealth.sg ｜ HK · SG</div>
-      <p style="margin-top:24px;color:rgba(255,255,255,0.65);font-size:14px;">请回复本邮件，或致电香港、新加坡两地办公室——<strong style="color:var(--gold-light)">24 小时内，您将收到 ARK Trust 一位资深合伙人的亲自回复</strong>。</p>
+
+      <p class="cta-question">请告诉我们，您目前对信托的考虑是：</p>
+
+      <div class="trust-choice">
+        <button type="button" class="choice-btn" data-choice="sg">
+          <div class="choice-flag">🇸🇬</div>
+          <div class="choice-label">新加坡信托</div>
+          <div class="choice-sub">SINGAPORE TRUST</div>
+        </button>
+        <button type="button" class="choice-btn" data-choice="hk">
+          <div class="choice-flag">🇭🇰</div>
+          <div class="choice-label">香港信托</div>
+          <div class="choice-sub">HONG KONG TRUST</div>
+        </button>
+        <button type="button" class="choice-btn choice-btn-tertiary" data-choice="none">
+          <div class="choice-flag">·</div>
+          <div class="choice-label">暂无信托计划</div>
+          <div class="choice-sub">NOT YET</div>
+        </button>
+      </div>
+
+      <form class="trust-form" id="trust-form" style="display:none">
+        <input type="hidden" name="choice" id="form-choice">
+        <div class="form-row">
+          <label>姓名 <span class="req">*</span>
+            <input type="text" name="name" required autocomplete="name" placeholder="您的姓名">
+          </label>
+        </div>
+        <div class="form-row">
+          <label>联系电话 <span class="req">*</span>
+            <input type="tel" name="phone" required autocomplete="tel" placeholder="+852 / +65 / +86">
+          </label>
+        </div>
+        <div class="form-row">
+          <label>邮箱 <span class="req">*</span>
+            <input type="email" name="email" required autocomplete="email" placeholder="your@email.com">
+          </label>
+        </div>
+        <button type="submit" class="cta-button form-submit">提交信息</button>
+        <div class="form-note">提交后，<strong>24 小时内</strong>，您将收到 ARK Trust 一位资深合伙人的亲自回复。<br>您的信息仅用于本次咨询，受严格保密义务约束。</div>
+      </form>
+
+      <div class="thanks-msg" id="thanks-msg" style="display:none">
+        <div class="thanks-mark">✓</div>
+        <div class="thanks-title">感谢您的信任</div>
+        <div class="thanks-text">您的信息已收到。<br>ARK Trust 一位资深合伙人将在 <strong>24 小时内</strong> 与您亲自联系。</div>
+      </div>
+
+      <div class="thanks-msg-none" id="thanks-msg-none" style="display:none">
+        <div class="thanks-text">感谢您耐心读完这封信。<br>当您准备好时，我们都在 ——<br><strong>trust@arkwealth.sg ｜ HK · SG</strong></div>
+      </div>
     </div>
 
     <div class="signature">
@@ -1253,6 +1486,94 @@ document.querySelectorAll('.stage-marker').forEach(m => {
     m.style.animation = 'fadeIn 0.4s ease';
   });
 });
+
+/* ============ V2: Trust choice + form ============ */
+// Vincent: 把下面 FORMSPREE_ENDPOINT 替换成你在 https://formspree.io 创建的 form endpoint
+// （登录用 arkwealth_ai@arkwealth.sg → New Form → 复制 https://formspree.io/f/xxxxxxxx 完整地址替换）
+// 替换前：表单会通过 mailto 自动打开邮件客户端，预填客户信息发到 arkwealth_ai@arkwealth.sg。
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID';
+const NOTIFY_EMAIL = 'arkwealth_ai@arkwealth.sg';
+
+const choiceBtns = document.querySelectorAll('.choice-btn');
+const trustForm = document.getElementById('trust-form');
+const thanksMsg = document.getElementById('thanks-msg');
+const thanksMsgNone = document.getElementById('thanks-msg-none');
+const formChoice = document.getElementById('form-choice');
+
+choiceBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const choice = btn.dataset.choice;
+    choiceBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    if (choice === 'sg' || choice === 'hk') {
+      formChoice.value = (choice === 'sg') ? '新加坡信托' : '香港信托';
+      trustForm.style.display = 'block';
+      thanksMsgNone.style.display = 'none';
+      thanksMsg.style.display = 'none';
+      setTimeout(() => trustForm.scrollIntoView({behavior:'smooth', block:'center'}), 120);
+    } else {
+      trustForm.style.display = 'none';
+      thanksMsg.style.display = 'none';
+      thanksMsgNone.style.display = 'block';
+    }
+  });
+});
+
+if (trustForm) {
+  trustForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const fd = new FormData(trustForm);
+    const submitBtn = trustForm.querySelector('.form-submit');
+    const orig = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = '提交中…';
+
+    const payload = {
+      choice: fd.get('choice'),
+      name: fd.get('name'),
+      phone: fd.get('phone'),
+      email: fd.get('email'),
+      submittedAt: new Date().toISOString(),
+      source: 'ARK Trust 致客户信 V2',
+      _subject: '[ARK Trust 致客户信] 新留资 - ' + fd.get('choice') + ' - ' + fd.get('name')
+    };
+
+    const useFormspree = !FORMSPREE_ENDPOINT.includes('REPLACE_WITH_YOUR_FORM_ID');
+
+    if (useFormspree) {
+      try {
+        const r = await fetch(FORMSPREE_ENDPOINT, {
+          method:'POST',
+          headers:{'Content-Type':'application/json','Accept':'application/json'},
+          body: JSON.stringify(payload)
+        });
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        trustForm.style.display = 'none';
+        thanksMsg.style.display = 'block';
+        return;
+      } catch (err) { /* fall through */ }
+    }
+
+    const subject = encodeURIComponent(payload._subject);
+    const body = encodeURIComponent(
+      '【ARK Trust 致客户信 - 留资信息】\n\n' +
+      '客户选择：' + payload.choice + '\n' +
+      '姓名：' + payload.name + '\n' +
+      '联系电话：' + payload.phone + '\n' +
+      '邮箱：' + payload.email + '\n' +
+      '提交时间：' + payload.submittedAt + '\n' +
+      '来源：' + payload.source + '\n\n' +
+      '— 自动生成于 ' + window.location.href
+    );
+    window.location.href = 'mailto:' + NOTIFY_EMAIL + '?subject=' + subject + '&body=' + body;
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = orig;
+      trustForm.style.display = 'none';
+      thanksMsg.style.display = 'block';
+    }, 800);
+  });
+}
 </script>
 </body>
 </html>
