@@ -900,6 +900,22 @@ table.t .cell-sub{
   .adv-card-wide::after{display:none}
 }
 
+
+/* ============ DEFINED TERM (术语首次定义高亮) ============ */
+.defined-term{
+  display:inline-block;
+  font-family:var(--serif-cn);
+  font-weight:700;
+  font-size:1.08em;
+  color:var(--navy);
+  letter-spacing:1px;
+  padding:1px 6px;
+  background:linear-gradient(transparent 55%, rgba(201,166,107,0.32) 55%, rgba(201,166,107,0.32) 92%, transparent 92%);
+  border-radius:2px;
+  position:relative;
+  margin:0 1px;
+}
+
 </style>
 </head>
 <body>
@@ -1118,7 +1134,7 @@ table.t .cell-sub{
       </p>
     </div>
 
-    <p>这里我们会用到"低价信托机构"这个词，是指一些<strong>创立时间较短、只有数人小团队、靠压缩信托运营基础设施换取低费率优势</strong>的小型信托机构——它们看似便宜的原因，<strong>不是更高效率，而是省略了客户看不见的机构投入</strong>：档案系统、合规团队、税务筹划、业务连续性安排、跨代际服务能力等；因此往往隐藏着<strong>巨大的结构性风险</strong>。</p>
+    <p>这里我们会用到"<span class="defined-term">低价信托机构</span>"这个词，是指一些<strong>创立时间较短、只有数人小团队、靠压缩信托运营基础设施换取低费率优势</strong>的小型信托机构——它们看似便宜的原因，<strong>不是更高效率，而是省略了客户看不见的机构投入</strong>：档案系统、合规团队、税务筹划、业务连续性安排、跨代际服务能力等；因此往往隐藏着<strong>巨大的结构性风险</strong>。</p>
 
     <!-- 6 RISKS TABLE -->
     <div class="risk-table-wrap">
