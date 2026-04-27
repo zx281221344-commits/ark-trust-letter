@@ -1036,26 +1036,31 @@ table.t .cell-sub{
   .ch3-cta-btn{padding:12px 24px;font-size:15px;letter-spacing:1.5px}
 }
 
-/* Sticky floating CTA */
+/* Sticky floating CTA — GOLD edition */
 .sticky-cta{
   position:fixed;
-  bottom:24px;right:24px;
+  bottom:28px;right:28px;
   z-index:100;
   display:inline-flex;align-items:center;gap:8px;
-  padding:13px 22px;
-  background:linear-gradient(135deg,var(--navy-deep),var(--navy));
-  color:var(--gold-light);
-  border:1px solid var(--gold);
+  padding:14px 26px;
+  /* Premium gold gradient — diagonal highlight for 3D depth */
+  background:linear-gradient(135deg,#E0C593 0%,#C9A66B 50%,#A88748 100%);
+  color:var(--navy-deep);
+  border:1px solid #A88748;
   border-radius:999px;
   font-family:var(--serif-cn);
-  font-size:14px;font-weight:500;
-  letter-spacing:1.5px;
+  font-size:14px;font-weight:600;
+  letter-spacing:2px;
   text-decoration:none;
-  box-shadow:0 8px 24px rgba(15,29,48,0.28);
+  text-shadow:0 1px 0 rgba(255,255,255,0.25);
+  box-shadow:
+    0 10px 28px rgba(168,135,72,0.40),
+    0 2px 6px rgba(0,0,0,0.10),
+    inset 0 1px 0 rgba(255,255,255,0.30);
   opacity:0;
-  transform:translateY(16px) scale(0.95);
+  transform:translateY(20px) scale(0.92);
   pointer-events:none;
-  transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+  transition:all 0.5s cubic-bezier(0.34,1.56,0.64,1);
 }
 .sticky-cta.visible{
   opacity:1;
@@ -1063,21 +1068,30 @@ table.t .cell-sub{
   pointer-events:auto;
 }
 .sticky-cta:hover{
-  box-shadow:0 12px 32px rgba(201,166,107,0.4);
-  border-color:var(--gold-light);
-  background:linear-gradient(135deg,var(--navy),var(--navy-deep));
+  background:linear-gradient(135deg,#C9A66B 0%,#A88748 60%,#8B6F35 100%);
+  color:#fff;
+  border-color:#8B6F35;
+  text-shadow:0 1px 2px rgba(0,0,0,0.20);
+  box-shadow:
+    0 14px 36px rgba(168,135,72,0.55),
+    0 3px 8px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.20);
+  transform:translateY(-2px) scale(1.02);
 }
 .sticky-cta .sticky-cta-arrow{
   font-family:var(--serif-en);
-  font-size:16px;
+  font-size:17px;font-weight:700;
   transition:transform 0.3s;
 }
-.sticky-cta:hover .sticky-cta-arrow{transform:translateX(3px)}
+.sticky-cta:hover .sticky-cta-arrow{transform:translateX(4px)}
 @media (max-width:640px){
   .sticky-cta{
-    bottom:16px;right:16px;
-    padding:11px 18px;font-size:13px;
-    box-shadow:0 6px 20px rgba(15,29,48,0.32);
+    bottom:18px;right:18px;
+    padding:12px 20px;font-size:13px;
+    letter-spacing:1.5px;
+    box-shadow:
+      0 8px 22px rgba(168,135,72,0.45),
+      0 2px 5px rgba(0,0,0,0.10);
   }
 }
 @media print{
@@ -1500,7 +1514,7 @@ table.t .cell-sub{
     <div class="ch3-cta">
       <div class="ch3-cta-line"></div>
       <p class="ch3-cta-lead"><em>如果您此刻已经感到与 ARK Trust 同频——</em></p>
-      <a href="#sec-6" class="ch3-cta-btn">
+      <a href="#trust-action" class="ch3-cta-btn">
         <span>点此开启您的第一次对话</span>
         <span class="arrow">→</span>
       </a>
@@ -1644,7 +1658,7 @@ table.t .cell-sub{
     <div class="closing-cta-block">
       <p>如果您愿意展开第一次对话，我们会以一份<strong>《信托适配性评估》</strong>开始这段旅程——这份评估<strong>免费、无承诺、无压力</strong>，目的只有一个：帮助您判断信托是否真的适合您的家庭，以及（如果适合）如何走出第一步。</p>
 
-      <p class="cta-question">请告诉我们，您目前对信托的考虑是：</p>
+      <p class="cta-question" id="trust-action">请告诉我们，您目前对信托的考虑是：</p>
 
       <div class="trust-choice">
         <button type="button" class="choice-btn" data-choice="sg">
@@ -1911,39 +1925,56 @@ if (trustForm) {
   });
 })();
 
-/* ============ V3.3: Sticky CTA visibility ============ */
+/* ============ V3.4: Sticky CTA visibility (FIXED) ============ */
+/* Bug fix: defer element lookup until DOM is ready, since the <a> sits
+   after this <script> in document order. */
 (function(){
-  var stickyCta = document.getElementById('stickyCta');
-  var closingSection = document.getElementById('sec-6');
-  if (!stickyCta || !closingSection) return;
-
-  function update(){
-    var vh = window.innerHeight || document.documentElement.clientHeight;
-    var scrollY = window.scrollY || window.pageYOffset || 0;
-    var rect = closingSection.getBoundingClientRect();
-    /* 显示条件: 滚过 1.5 屏 AND closing-section 还没进入视口上半 */
-    var pastHero = scrollY > vh * 1.5;
-    var closingNear = rect.top < vh * 0.7;
-    if (pastHero && !closingNear){
-      stickyCta.classList.add('visible');
-    } else {
-      stickyCta.classList.remove('visible');
+  function init(){
+    var stickyCta = document.getElementById('stickyCta');
+    var closingSection = document.getElementById('sec-6');
+    if (!stickyCta || !closingSection){
+      /* Not yet in DOM — try once more after a tick */
+      setTimeout(function(){
+        var s = document.getElementById('stickyCta');
+        var c = document.getElementById('sec-6');
+        if (s && c) attach(s, c);
+      }, 200);
+      return;
     }
+    attach(stickyCta, closingSection);
   }
 
-  window.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', update);
-  /* 初始化 */
-  if (document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', update);
-  } else {
+  function attach(stickyCta, closingSection){
+    function update(){
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      var scrollY = window.scrollY || window.pageYOffset || 0;
+      var rect = closingSection.getBoundingClientRect();
+      /* 显示条件: 滚过 1.5 屏 AND closing-section 还没进入视口上半 */
+      var pastHero = scrollY > vh * 1.5;
+      var closingNear = rect.top < vh * 0.7;
+      if (pastHero && !closingNear){
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
     update();
+  }
+
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    /* Document already parsed — but the <a> element might still be
+       parsed AFTER this <script>. Use setTimeout to defer past current task. */
+    setTimeout(init, 0);
   }
 })();
 </script>
 
 <!-- Sticky floating CTA (V3.3) -->
-<a href="#sec-6" class="sticky-cta" id="stickyCta" aria-label="开始对话">
+<a href="#trust-action" class="sticky-cta" id="stickyCta" aria-label="开始对话">
   <span class="sticky-cta-text">开始对话</span>
   <span class="sticky-cta-arrow">→</span>
 </a>
