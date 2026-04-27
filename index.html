@@ -951,6 +951,139 @@ table.t .cell-sub{
   .compliance-footer p{font-size:12px;line-height:1.85;}
 }
 
+
+/* ============ V3.1 BUGFIX: 3-col table mobile scroll ============ */
+.compare-3col-wrap{position:relative}
+@media (max-width:760px){
+  .compare-3col-wrap{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    margin:8px -20px 0;
+    padding:0 20px 4px;
+    /* fade hint at right edge to suggest scrolling */
+    background:linear-gradient(to right, transparent calc(100% - 24px), rgba(201,166,107,0.12));
+  }
+  .compare-3col-wrap::after{
+    content:'← 左右滑动查看完整对比 →';
+    display:block;text-align:center;
+    color:var(--gold-deep);font-size:11px;
+    letter-spacing:1px;margin:10px 0 0;
+    font-style:italic;font-weight:500;
+    opacity:0.8;
+  }
+  table.compare-3col{
+    min-width:720px;
+    font-size:13px;
+  }
+  table.compare-3col thead th,
+  table.compare-3col tbody td{
+    padding:12px 12px;
+    white-space:normal;
+  }
+}
+
+
+/* ============ V3.3 CTA STYLES ============ */
+/* Chapter 3 mid-page CTA */
+.ch3-cta{
+  margin:64px auto 0;
+  max-width:580px;
+  text-align:center;
+  padding:32px 0 8px;
+}
+.ch3-cta-line{
+  width:60px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin:0 auto;
+}
+.ch3-cta-lead{
+  margin:24px 0 18px !important;
+  font-family:var(--serif-cn);
+  font-size:17px;line-height:1.7;
+  color:var(--ink-soft);
+  text-indent:0 !important;
+  font-style:italic;
+}
+.ch3-cta-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 32px;
+  font-family:var(--serif-cn);
+  font-size:16px;font-weight:500;letter-spacing:2px;
+  color:var(--gold-deep);
+  background:rgba(201,166,107,0.04);
+  border:1px solid var(--gold);
+  border-radius:2px;
+  text-decoration:none;
+  transition:all 0.4s ease;
+  margin-bottom:24px;
+}
+.ch3-cta-btn:hover{
+  background:linear-gradient(135deg,var(--navy-deep),var(--navy));
+  color:var(--gold-light);
+  letter-spacing:3px;
+  border-color:var(--gold-light);
+  box-shadow:0 4px 18px rgba(201,166,107,0.25);
+}
+.ch3-cta-btn .arrow{
+  font-family:var(--serif-en);
+  font-size:18px;
+  transition:transform 0.3s;
+}
+.ch3-cta-btn:hover .arrow{transform:translateX(4px)}
+@media (max-width:640px){
+  .ch3-cta{margin-top:48px;padding:24px 0 8px}
+  .ch3-cta-lead{font-size:15px}
+  .ch3-cta-btn{padding:12px 24px;font-size:15px;letter-spacing:1.5px}
+}
+
+/* Sticky floating CTA */
+.sticky-cta{
+  position:fixed;
+  bottom:24px;right:24px;
+  z-index:100;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 22px;
+  background:linear-gradient(135deg,var(--navy-deep),var(--navy));
+  color:var(--gold-light);
+  border:1px solid var(--gold);
+  border-radius:999px;
+  font-family:var(--serif-cn);
+  font-size:14px;font-weight:500;
+  letter-spacing:1.5px;
+  text-decoration:none;
+  box-shadow:0 8px 24px rgba(15,29,48,0.28);
+  opacity:0;
+  transform:translateY(16px) scale(0.95);
+  pointer-events:none;
+  transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.sticky-cta.visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
+  pointer-events:auto;
+}
+.sticky-cta:hover{
+  box-shadow:0 12px 32px rgba(201,166,107,0.4);
+  border-color:var(--gold-light);
+  background:linear-gradient(135deg,var(--navy),var(--navy-deep));
+}
+.sticky-cta .sticky-cta-arrow{
+  font-family:var(--serif-en);
+  font-size:16px;
+  transition:transform 0.3s;
+}
+.sticky-cta:hover .sticky-cta-arrow{transform:translateX(3px)}
+@media (max-width:640px){
+  .sticky-cta{
+    bottom:16px;right:16px;
+    padding:11px 18px;font-size:13px;
+    box-shadow:0 6px 20px rgba(15,29,48,0.32);
+  }
+}
+@media print{
+  .sticky-cta{display:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -966,6 +1099,7 @@ table.t .cell-sub{
     <a href="#sec-4">流程</a>
     <a href="#sec-5">费用</a>
     <a href="#sec-6">承诺</a>
+    <a href="#sec-disclosures">免责声明</a>
   </div>
 </nav>
 
@@ -1177,7 +1311,7 @@ table.t .cell-sub{
 
     <!-- 6 RISKS TABLE -->
     <div class="risk-table-wrap">
-      <div class="table-caption">低价信托机构的<strong>六类典型风险</strong></div>
+      <div class="table-caption">小微型信托机构的<strong>六类典型风险</strong></div>
       <table class="t">
         <thead>
           <tr><th style="width:30%">风险类型</th><th>对您的直接后果</th></tr>
@@ -1231,11 +1365,12 @@ table.t .cell-sub{
     <!-- 7-DIM COMPARISON TABLE (NEW IN V2) -->
     <div class="risk-table-wrap">
       <div class="table-caption">核心差异对比 ｜ <strong>客户综合服务定制化</strong></div>
+      <div class="compare-3col-wrap">
       <table class="compare-table compare-3col">
         <thead>
           <tr>
             <th style="width:16%">评估维度</th>
-            <th>新兴轻量化信托服务方</th>
+            <th>小微型信托机构</th>
             <th>外资大型服务机构</th>
             <th>ARK Trust 专业信托公司</th>
           </tr>
@@ -1273,6 +1408,7 @@ table.t .cell-sub{
           </tr>
         </tbody>
       </table>
+      </div>
       <p class="no-indent compliance-note" style="font-style:italic;color:var(--ink-light);font-size:12px;line-height:1.85;margin:14px 0 0;padding:12px 16px;background:#FBF6EA;border-left:2px solid var(--gold-deep);">
         <strong style="color:var(--gold-deep);font-style:normal">注：</strong>上表对比基于一般行业结构特征作客观描述，<strong style="color:var(--ink-soft);font-style:normal">不针对任何特定第三方机构或服务方</strong>；各类机构内部存在显著差异。建议客户在选择信托服务机构时结合自身需求进行独立尽调，并以监管披露及机构正式资料为准。本表信息不构成对任何第三方机构的评价或推荐。
       </p>
@@ -1352,12 +1488,23 @@ table.t .cell-sub{
         <h4>三地一体化法律和税务的综合规划安排</h4>
         <div class="adv-sub">INTEGRATED TAX EXPERTISE</div>
         <ul>
-          <li><strong>新加坡与香港</strong>两地配备专业团队，并依规与持牌专业服务伙伴协同，覆盖设立人身份、结构税务中性、受益人受领的全场景</li>
+          <li><strong>新加坡、香港和中国大陆</strong>三地配备专业团队，并依规与持牌专业服务伙伴协同，覆盖设立人身份、结构税务中性、受益人受领的全场景</li>
           <li>从设立、注入到分配、传承全周期，<strong>前置法律和税务的综合规划安排而非事后补救</strong></li>
           <li>主动追踪 <strong>CRS / FATCA</strong> 监管动向，确保跨境合规</li>
         </ul>
         <div class="adv-quote">让信托从"单维度法律隔离"，升级为"<strong>法律隔离 + 税务护航的双轮驱动</strong>"。</div>
       </div>
+    </div>
+
+    <!-- Chapter 3 mid-page CTA (转化高峰点) -->
+    <div class="ch3-cta">
+      <div class="ch3-cta-line"></div>
+      <p class="ch3-cta-lead"><em>如果您此刻已经感到与 ARK Trust 同频——</em></p>
+      <a href="#sec-6" class="ch3-cta-btn">
+        <span>点此开启您的第一次对话</span>
+        <span class="arrow">→</span>
+      </a>
+      <div class="ch3-cta-line"></div>
     </div>
   </div>
 </section>
@@ -1560,7 +1707,7 @@ table.t .cell-sub{
 
 
 <!-- ============ COMPLIANCE FOOTER ============ -->
-<section class="compliance-footer">
+<section class="compliance-footer" id="sec-disclosures">
   <h3>
     重要披露与免责声明
     <span class="en">IMPORTANT DISCLOSURES</span>
@@ -1597,7 +1744,7 @@ const io = new IntersectionObserver(entries => {
 reveals.forEach(r => io.observe(r));
 
 // Active nav highlighting
-const sections = document.querySelectorAll('.section,.closing-section');
+const sections = document.querySelectorAll('.section,.closing-section,.compliance-footer');
 const navLinks = document.querySelectorAll('.nav-links a');
 const navIO = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -1708,6 +1855,98 @@ if (trustForm) {
     }, 800);
   });
 }
+
+/* ============ V3.1 BUGFIX: hash-navigation visibility ============ */
+/* WeChat WebView sometimes fails to trigger IntersectionObserver after
+   smooth-scroll to anchor, leaving target .reveal section stuck at opacity:0.
+   This block force-shows hash-target sections, plus a 3s viewport fallback. */
+(function(){
+  function showHashTarget(){
+    var hash = window.location.hash;
+    if (!hash || hash === '#') return;
+    var target = document.querySelector(hash);
+    if (!target) return;
+    if (target.classList.contains('reveal')){
+      target.classList.add('visible');
+    }
+    // Also force any nested .reveal in the section
+    target.querySelectorAll('.reveal').forEach(function(el){
+      el.classList.add('visible');
+    });
+  }
+
+  // Initial page load (URL might already have hash)
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', function(){ setTimeout(showHashTarget, 50); });
+  } else {
+    setTimeout(showHashTarget, 50);
+  }
+
+  // Hash change events
+  window.addEventListener('hashchange', function(){ setTimeout(showHashTarget, 50); });
+
+  // Nav link clicks (proactive, before scroll completes)
+  document.addEventListener('click', function(e){
+    var link = e.target.closest && e.target.closest('a[href^="#"]');
+    if (link){
+      // Wait for browser scroll to settle, then ensure visibility
+      setTimeout(showHashTarget, 200);
+      setTimeout(showHashTarget, 800);
+    }
+  });
+
+  // Bulletproof fallback: 3 seconds after load, force-show any
+  // .reveal that's near or in viewport but still invisible
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){
+        var rect = el.getBoundingClientRect();
+        var vh = window.innerHeight || document.documentElement.clientHeight;
+        // If element is anywhere within ±2 viewports of current scroll → force show
+        if (rect.top < vh * 2 && rect.bottom > -vh * 2){
+          el.classList.add('visible');
+        }
+      });
+    }, 3000);
+  });
+})();
+
+/* ============ V3.3: Sticky CTA visibility ============ */
+(function(){
+  var stickyCta = document.getElementById('stickyCta');
+  var closingSection = document.getElementById('sec-6');
+  if (!stickyCta || !closingSection) return;
+
+  function update(){
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var scrollY = window.scrollY || window.pageYOffset || 0;
+    var rect = closingSection.getBoundingClientRect();
+    /* 显示条件: 滚过 1.5 屏 AND closing-section 还没进入视口上半 */
+    var pastHero = scrollY > vh * 1.5;
+    var closingNear = rect.top < vh * 0.7;
+    if (pastHero && !closingNear){
+      stickyCta.classList.add('visible');
+    } else {
+      stickyCta.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  /* 初始化 */
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', update);
+  } else {
+    update();
+  }
+})();
 </script>
+
+<!-- Sticky floating CTA (V3.3) -->
+<a href="#sec-6" class="sticky-cta" id="stickyCta" aria-label="开始对话">
+  <span class="sticky-cta-text">开始对话</span>
+  <span class="sticky-cta-arrow">→</span>
+</a>
+
 </body>
 </html>
